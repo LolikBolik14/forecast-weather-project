@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forecast</i></title>
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Forecast</title>
+  </head>
+  <body>
+    <div class="conteiner">
+      <div class="main">
+        <div class="weather-wrapper">
+          <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+              <h1 class="logo-title">
+                WEA<img src="images/logo.png" alt="logo" class="img-logo" />THER
+              </h1>
+            </div>
+
+            <!-- Search form-->
+            <div class="search">
+              <form id="searching">
+                <input
+                  class="search-city"
+                  id="enter-city"
+                  type="text"
+                  placeholder="Enter a city"
+                  autocomplete="off" />
+                <button class="search_city-submit" type="submit"></button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Temperature in city today -->
+          <h2>
+            in
+            <span id="city"></span>
+          </h2>
+          <div class="temperature-city">
+            <div class="temperature-today">
+              <img src="#" alt="" class="icon" id="icon" />
+              <p>
+                <span class="degrees" id="degrees"></span>
+                <span class="units">
+                  <a href="#" class="unit" id="celsius">°C</a>|<a
+                    href="#"
+                    class="unit"
+                    id="fahrenheit"
+                    >°F</a
+                  >
+                </span>
+              </p>
+            </div>
+            <div class="current-description">
+              <ul class="current-desc">
+                <li id="description"></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>m/s</li>
+              </ul>
+            </div>
+
+            <!-- Date -->
+            <div class="date">
+              <p class="time-day-month">
+                <span id="time"></span>
+                <br />
+                <span id="day"></span>
+                <br />
+                <span class="font-weight-bold" id="number"></span>
+                <br />
+                <span id="month"></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Position of the sun -->
+          <div class="position-sun">
+            <p class="sun">
+              Sunrise <span class="sunrise" id="sunrise"></span> Sunset
+              <span class="sunset" id="sunset"></span>
+            </p>
+          </div>
+
+          <!-- Forecast -->
+          <div class="forecast">
+            <div class="weather-titles">
+              <ul class="properties">
+                <li class="max-min">Temperature, °C <b>max</b>/min</li>
+                <li>Pressure, hPa</li>
+                <li>Humidity, %</li>
+                <li>Wind, m/sec</li>
+                <li class="precipitation">Precipitation, %</li>
+              </ul>
+            </div>
+
+            <!-- Table -->
+            <div class="forecast-table" id="forecast-table"></div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <small class="linkGit">
+            <a
+              href="https://github.com/LolikBolik14/my-weather-project"
+              class="git"
+              target="_blank"
+              >Open-source code,
+            </a>
+            by Olga Shliakhova
+          </small>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/4ed0fbea86.js"
+      crossorigin="anonymous"></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
